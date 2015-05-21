@@ -143,7 +143,7 @@ public class Frame extends javax.swing.JFrame {
             //button clicked > teken de maze:
             doolhof.paintMaze();
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Er is een kritische fout opgetreden, graag de aplicatie opnieuw opstarten");
+            JOptionPane.showMessageDialog(null, "Er is een kritische fout opgetreden, graag de applicatie opnieuw opstarten");
         }
     }//GEN-LAST:event_jButton1ActionPerformed
 
@@ -152,7 +152,7 @@ public class Frame extends javax.swing.JFrame {
             //button clicked > teken de oplossing:
             speler.verkrijgSnelsteRoute(panel);
         } catch (IOException ex) {
-            JOptionPane.showMessageDialog(null, "Er is een kritische fout opgetreden, graag de aplicatie opnieuw opstarten"); 
+            JOptionPane.showMessageDialog(null, "Er is een kritische fout opgetreden, graag de applicatie opnieuw opstarten"); 
         }
     }//GEN-LAST:event_jButton2ActionPerformed
 
