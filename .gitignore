@@ -58,3 +58,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 /EscApe/nbproject/private/
+/EscApe/build/
