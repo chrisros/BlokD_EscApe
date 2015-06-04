@@ -11,6 +11,7 @@ import java.awt.GridLayout;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import javax.imageio.ImageIO;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -37,6 +38,8 @@ public class Game {
     private final Frame frame;
     private final JPanel gamePanel;
     private int curLevel;
+    ArrayList<Block> blocks = new ArrayList<>();
+    
     
     //level data die later uit een XML wordt gehaald
     private int blockSize = 40;
@@ -57,6 +60,7 @@ public class Game {
         constructLevel(curLevel);
         createBlocks();
         getLevelVars(curLevel);
+        printBlocks();
     }
     
     private void getLevelVars(int level){
@@ -103,7 +107,7 @@ public class Game {
                     {
                         blok = new Block(returnImage, blockSize, false);
                     }
-                    gamePanel.add(blok);
+                    blocks.add(blok);
                 } catch (Exception e) {
                   
                 }
@@ -124,7 +128,11 @@ public class Game {
         gamePanel.requestFocusInWindow();
         gamePanel.updateUI();
     }
-
+        private void printBlocks(){
+            for (int i = 0; i < blocks.size(); i++) {
+                gamePanel.add(blocks.get(i));
+            }
+        }
     private void getImages() {
         try {
             wall       = ImageIO.read(new File("src/images/wall.PNG"));
